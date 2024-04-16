@@ -86,5 +86,7 @@ S = 0
 **Алгоритм решения задачи в виде блок-схемы:**
 [Задание 1](blockDiagram1.drawio.pdf)
 [Задание 2](blockDiagram2.drawio.pdf)
-[Задание 3](blockDiagram3.drawio.pdf)
+[Задание 3](blockDiagram3.drawio.pdf)  
+
+**Описание используемых алгоритмических структур, выводы.**
 
