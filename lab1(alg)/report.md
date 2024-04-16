@@ -82,3 +82,9 @@ S = 0
   кц  
 иначе  
 конец  
+
+**Алгоритм решения задачи в виде блок-схемы:**
+[Задание 1](blockDiagram1.drawio.pdf)
+[Задание 2](blockDiagram2.drawio.pdf)
+[Задание 3](blockDiagram3.drawio.pdf)
+
