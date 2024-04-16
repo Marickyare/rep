@@ -11,7 +11,7 @@ int main(){
 	printf("Введите значение E: \n"); 
 	cin >> E;
 	
-	if (E >= (1 / 3)) {
+	if (E >= (float(1)/float(3))) {
 		printf("Введите меньшее значение.");
 	}
 	else {
