@@ -91,4 +91,4 @@ int main(){
 	return 0;  
 }  
 
-**Скриншоты результатов работы программ:** [Задание 1]("img_2_lab/workres1") [Задание 1]("img_2_lab/workres2") [Задание 1]("img_2_lab/workres3")
+**Скриншоты результатов работы программ:** [Задание 1]("img_2_lab/workres1.png") [Задание 1]("img_2_lab/workres2.png") [Задание 1]("img_2_lab/workres3.png")
