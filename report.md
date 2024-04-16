@@ -91,4 +91,8 @@ int main(){
 	return 0;  
 }  
 
-**Скриншоты результатов работы программ:** [Задание 1](img_2_lab/workres1.png) [Задание 2](img_2_lab/workres2.png) [Задание 1](img_2_lab/workres3.png)
+**Скриншоты результатов работы программ:** [Задание 1](img_2_lab/workres1.png) [Задание 2](img_2_lab/workres2.png) [Задание 3](img_2_lab/workres3.png)
+
+**Описание функций, используемых  работе:**
+
+
