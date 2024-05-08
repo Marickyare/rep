@@ -12,7 +12,7 @@
 [Задание 1](img_3_lab/blockDiagram1.drawio.pdf). [Задание 2](img_3_lab/blockDiagram2.drawio.pdf).  
 **Тексты программ.**  
 *Задание 1.*  
->#include <iostream>  
+>#include<iostream>   
 #include <math.h>  
 #include <locale.h>  
 using namespace std;  
@@ -51,7 +51,7 @@ int main() {
 }
 
 *Задание 2.*  
->#include <iostream>  
+>#include<iostream>   
 #include <math.h>  
 #include <locale.h>  
 using namespace std;  
