@@ -133,4 +133,43 @@ int main() {
 	out_int.close();  
 	cout << "Информация записана в необходимый файл.";  
 }  
-7) 
+7) >#define _CRT_SECURE_NO_WARNINGS  
+#include <math.h>  
+#include <locale.h>  
+#include <iostream>  
+#include <fstream>  
+using namespace std;  
+int main() {  
+	setlocale(LC_ALL, "Russian");  
+	FILE* f_input, * f_output;  
+	int res_from_file, sum, max, quan, inp;  
+	f_input = fopen("predel.txt", "r");  
+	if (f_input == 0) {  
+		printf("Не удалось открыть файл");  
+		return 1;  
+	}  
+	fscanf(f_input, "%d", &res_from_file);  
+	fclose(f_input);  
+	quan = 0;  
+	sum = 0;  
+	max = 0;  
+	while (sum < res_from_file) {  
+		printf("Введите число :");  
+		scanf("%d", &inp);  
+		if (inp % 2 == 0) {  
+			sum += inp;  
+		}  
+		if (inp > max) {  
+			max = inp;  
+		}  
+		quan += 1;  
+	}  
+	ofstream f_output;  
+		f_output.open("kolmax.txt", "w");  
+	if (f_output == 0) {  
+		cout << "Не удалось открыть файл";  
+		return 1;  
+	}  
+	f_output << "Количество введённых значений: %d\nМаксимальное число: %d", << quan, max;  
+	f_output.close();  
+}  
