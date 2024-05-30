@@ -12,7 +12,7 @@
 дублирования программного кода в программе.
 
 **Блок схемы алгоритмов.**
-[Задание 1](img_3_lab/blockDiagram1.pdf). [Задание 2](img_3_lab/blockDiagram2.pdf). [Задание 3](img_3_lab/blockDiagram3.pdf).  
+[Задание 1](img_4_lab/blockDiagram1.pdf). [Задание 2](img_4_lab/blockDiagram2.pdf). [Задание 3](img_4_lab/blockDiagram3.pdf).  
 
 **Тексты программ.**
 
