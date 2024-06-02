@@ -236,4 +236,43 @@ float average_f(float* x) {
     float average =  sum / float(3);  
     return average;  
 }  
-7)
+
+7) *Задание 2.*    
+   >>#define _CRT_SECURE_NO_WARNINGS  
+#include <math.h>  
+#include <stdlib.h>  
+#include <locale.h>  
+#include <iostream>;  
+using namespace std;  
+int area_of_a_triangle(int a, int b, int c) {  
+	int p = (a + b + c) / 2;  
+	int s = sqrt(p * (p - a) * (p - b) * (p - c));  
+	return s;  
+}  
+int calculation(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12) {  
+	int res;  
+	res = area_of_a_triangle(a1, a2, a3) + area_of_a_triangle(a4, a5, a3) + area_of_a_triangle(a7, a5, a6) + area_of_a_triangle(a7, a8, a9) + area_of_a_triangle(a9, a10, a11) + area_of_a_triangle(a1, a12, a11);  
+	return res;  
+}  
+int data_file(FILE* f_input) {  
+	int a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, res; 
+	fscanf(f_input, "%d%d%d%d%d%d%d%d%d%d%d%d", &a1, &a2, &a3, &a4, &a5, &a6, &a7, &a8, &a9, &a10, &a11, &a12);  
+	res = calculation(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);  
+	return res;  
+}  
+int out_screen(int res) {  
+	cout << "Площадь многоугольника в мм = " << res;  
+	return 1;  
+}  
+int main() {  
+	setlocale(LC_ALL, "Russian");  
+	FILE *f_input;  
+	int res;  
+	f_input = fopen("text_file.txt", "r");  
+	if (f_input == NULL) {  
+		printf("Файл открыть не удалось.");  
+	}  
+	res = data_file(f_input);  
+out_screen(res);  
+	fclose(f_input);  
+}  
