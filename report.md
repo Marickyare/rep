@@ -276,3 +276,60 @@ int main() {
 out_screen(res);  
 	fclose(f_input);  
 }  
+
+*Задание 3.*
+
+>#include <iostream>  
+#include <math.h>  
+#include <locale>  
+#include <fstream>  
+int calculate(int* a, int* b, int* c) {  
+	if (((*a) == (*b)) && ((*b) == (*c))) {				
+		return 2;  
+	}  
+	if (pow((*c), 2) == (pow((*a), 2) * pow((*b), 2)) || pow((*a), 2) + pow((*c), 2) == pow((*b), 2) || pow((*b), 2) + pow((*c), 2) == pow((*a), 2)) {	  
+		return 1;  
+	}  
+	if ((*a = (*b) && b != c) || (*a = (*c) && c != b) || (*b = (*c) && c != a)) {		
+		return 3;  
+	}  
+	if ((*a) != (*b) && (*b) != (*c) && (*a) != (*c)) {			  
+		return 4;  
+	}  
+	else {							  
+		return 5;  
+	}  
+}  
+int data_file(std::ifstream inp){  
+	int a, b, c;  
+	int ct = 0;  
+	int dimensions, result;  
+	while (!inp.eof()) {  
+		int dimensions;  
+		inp >> dimensions;  
+		return dimensions;  
+		dimensions = data_file(inp);  
+		a = dimensions % 10;  
+		b = (dimensions / 10) % 10;  
+		c = (dimensions / 100) % 10;  
+		result = calculate(&a, &b, &c);  
+		ct++;  
+		int out_screen(result);  
+}  
+int out_screen(){  
+	if (result == 1) {  
+		printf("%i треугольник со стороными (%i, %i, %i) является прямоугольным.\n", ct, a, b, c);  
+	}  
+	if (result == 2) {  
+		printf("%i треугольник со стороными (%i, %i, %i) является равносторонним.\n", ct, a, b, c);  
+	}  
+	if (result == 3) {  
+	 	printf("%i треугольник со стороными (%i, %i, %i) является равнобедренным.\n", ct, a, b, c);  
+}  
+ 	if (result == 4) {  
+		printf("%i треугольник со стороными (%i, %i, %i) является разносторонним.\n", ct, a, b, c);  
+	}  
+	if (result == 5) {  
+		printf("%i треугольник со стороными (%i, %i, %i) не существует.\n", ct, a, b, c);  
+	}  
+}  
