@@ -238,7 +238,7 @@ float average_f(float* x) {
 }  
 
 7) *Задание 2.*    
-   >>#define _CRT_SECURE_NO_WARNINGS  
+   >#define _CRT_SECURE_NO_WARNINGS  
 #include <math.h>  
 #include <stdlib.h>  
 #include <locale.h>  
@@ -332,4 +332,14 @@ int out_screen(){
 	if (result == 5) {  
 		printf("%i треугольник со стороными (%i, %i, %i) не существует.\n", ct, a, b, c);  
 	}  
+}  
+int main() {  
+	setlocale(LC_ALL, "Russian");  
+	std::ifstream inp;  
+	inp.open("lenght.txt");	  			
+	if (!inp) {		  				
+		printf("Не удалось открыть файл.");  
+	}  
+	int data_file(inp);  
+	inp.close();  
 }  
