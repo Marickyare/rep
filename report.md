@@ -13,7 +13,94 @@
 - передавать двумерные массивы в функции в качестве аргумента;
 - использовать указатели при работе с массивами на языке С/С++.
 
-**Тексты программ.**
+**Тексты программ.**  
+*Задание 1.*  
+>#include <locale.h>  
+#include <iostream>  
+#include <math.h>    
+using namespace std;  
+int main() {  
+	setlocale(LC_ALL, "Russian");  
+	int R;  
+	int ind1 = 0;  
+	int	ind2 = 0;  
+	const int N = 10;  
+	int arr[N];  
+	cout << "Введите число R, на которое будет ориентироваться: "; cin >> R;		//ввод числа R  
+	for (int i = 0; i < N; i++) {													//заполнение массива вручную.  
+		cout << "Введите " << i << " элемент массива: "; cin >> arr[i];  
+	}  
+	int min_c = fabs(R - (arr[0] + arr[1]));  
+	for (int i = 0; i < N; i++) {  
+		for (int j = i + 1; j < N; j++) {  
+				if (fabs(R - (arr[i] + arr[j])) <= min_c) {  
+					ind1 = i;  
+					ind2 = j;  
+					min_c = fabs(R - (arr[i] + arr[j]));  
+			}  
+		}  
+	}  
+	cout <<"Инддексы элементов массива, сумма которых более близка кведённому числу R: "<< ind1 << ", " << ind2;  
+}
+
+*Задание 2.*   
+#include <iostream>  
+#include <math.h>#include <locale.h>  
+using namespace std;  
+int logic_arr(int *arr, int size) {  
+	for (int i = 0; i < size; i++) {  
+		for (int j = i + 1; j < size; j++) {  
+			for (int k = 1; k < size; k++) {  
+				if ((arr[i] == arr[j]) || (arr[i] == k)) {  
+					int c = arr[i];  
+					return i;  
+				}  
+			}  
+		}  
+	}  
+	return int ( - 1);  
+}  
+int main() {  
+	setlocale(LC_ALL, "Russian");  
+	const int N = 10;  
+	int arr[N];  
+	for (int i = 0; i < N; i++) {													//заполнение массива вручную.  
+		cout << "Введите " << i << " элемент массива: "; cin >> arr[i];    
+	}  
+	cout << "Значение и номер элемента: " << logic_arr(arr, N);  
+}  
+
+*Задание 3.*  
+
+﻿#include <locale.h>  
+#include <fstream>  
+#include <iostream>  
+using namespace std;  
+float matrix_task(int a1, int a2, int a3, int a4) {  
+	return (((float)a1 + (float)a2 + (float)a3 + (float)a4) / 4);  
+}  
+int main() {  
+	setlocale(LC_ALL, "Russian");  
+	ifstream inp;  
+	inp.open("start_file.txt");  
+	if (!inp) {  
+		cout << "Не удалось открыть файл.";  
+		return 1;  
+	}  
+	const int k = 5;  
+	int arr[k][k];  
+	for (int i = 0; i < k; i++) {				//считываенние строк  
+		for (int j = 0; j < k; j++) {			//считывание столбцов  
+			inp >> arr[i][j];  
+		}  
+	}  
+	inp.close();  
+	int a1 = arr[0][1];  
+	int a2 = arr[1][2];  
+	int a3 = arr[2][3];  
+	int a4 = arr[3][4];  
+	cout << matrix_task(a1, a2, a3, a4) << endl;  
+}  
 
 **Скриншоты результатов работы программ.**
 
