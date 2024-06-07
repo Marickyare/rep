@@ -44,7 +44,7 @@ int main() {
 }
 
 *Задание 2.*   
-#include <iostream>  
+>#include <iostream>  
 #include <math.h>#include <locale.h>  
 using namespace std;  
 int logic_arr(int *arr, int size) {  
@@ -72,7 +72,7 @@ int main() {
 
 *Задание 3.*  
 
-﻿#include <locale.h>  
+>﻿#include <locale.h>  
 #include <fstream>  
 #include <iostream>  
 using namespace std;  
